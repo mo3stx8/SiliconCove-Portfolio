@@ -1,6 +1,7 @@
 'use client';
 
 import { useMessages, t } from '@/lib/i18n';
+import { px } from 'framer-motion';
 import { ArrowRight, Shield, Zap, Code2, Globe, BarChart3, Users, CheckCircle } from 'lucide-react';
 
 export default function HomePage({ locale }: { locale: string }) {
@@ -21,6 +22,8 @@ export default function HomePage({ locale }: { locale: string }) {
               <Globe className="w-4 h-4" />
               {t(messages, 'hero.badge')}
             </span>
+
+            {/* <img src="/logo.png" alt="SiliconCove" className="h-14 md:h-16 lg:h-60 w-auto shrink-0" /> */}
 
             <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
               {t(messages, 'hero.title')}{' '}
