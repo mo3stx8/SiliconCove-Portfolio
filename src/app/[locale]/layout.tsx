@@ -4,7 +4,6 @@ import '../globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { I18nProvider } from '@/lib/i18n';
-import { ThemeProvider } from '@/lib/theme';
 import enMessages from '@/messages/en.json';
 import arMessages from '@/messages/ar.json';
 
@@ -43,13 +42,11 @@ export default async function LocaleLayout({
       <body
         className={`${inter.variable} ${plusJakarta.variable} ${ibmPlex.variable} ${ibmPlexArabic.variable} antialiased`}
       >
-        <ThemeProvider>
-          <I18nProvider locale={validLocale} messages={messages}>
-            <Navbar />
-            <main className="min-h-screen">{children}</main>
-            <Footer />
-          </I18nProvider>
-        </ThemeProvider>
+        <I18nProvider locale={validLocale} messages={messages}>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

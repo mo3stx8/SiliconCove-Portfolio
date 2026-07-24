@@ -11,9 +11,9 @@ export default function HomePage({ locale }: { locale: string }) {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-surface via-white to-electric/5 dark:from-[#0f172a] dark:via-[#0f172a] dark:to-electric/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-surface via-white to-electric/5" />
         <div className="absolute top-20 right-0 w-96 h-96 bg-electric/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-navy/5 dark:bg-electric/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-navy/5 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -22,12 +22,12 @@ export default function HomePage({ locale }: { locale: string }) {
               {t(messages, 'hero.badge')}
             </span>
 
-            <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-navy dark:text-white leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+            <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
               {t(messages, 'hero.title')}{' '}
               <span className="gradient-text">{t(messages, 'hero.titleHighlight')}</span>
             </h1>
 
-            <p className="animate-fade-up opacity-0 animate-delay-200 text-lg md:text-xl text-steel dark:text-gray-400 mt-6 max-w-xl leading-relaxed">
+            <p className="animate-fade-up opacity-0 animate-delay-200 text-lg md:text-xl text-steel mt-6 max-w-xl leading-relaxed">
               {t(messages, 'hero.description')}
             </p>
 
@@ -45,7 +45,7 @@ export default function HomePage({ locale }: { locale: string }) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-navy dark:bg-[#020617]">
+      <section className="py-16 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -87,10 +87,10 @@ export default function HomePage({ locale }: { locale: string }) {
                 <div className="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric group-hover:text-white transition-all duration-300">
                   <service.icon className="w-7 h-7 text-electric group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-navy dark:text-white mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+                <h3 className="text-xl font-bold text-navy mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
                   {service.title}
                 </h3>
-                <p className="text-steel dark:text-gray-400 leading-relaxed">{service.desc}</p>
+                <p className="text-steel leading-relaxed">{service.desc}</p>
               </div>
             ))}
           </div>
@@ -98,7 +98,7 @@ export default function HomePage({ locale }: { locale: string }) {
       </section>
 
       {/* Values Preview */}
-      <section className="py-20 bg-surface dark:bg-[#1e293b]">
+      <section className="py-20 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="section-label">{t(messages, 'about.values.title')}</span>
@@ -115,10 +115,10 @@ export default function HomePage({ locale }: { locale: string }) {
                 <div className="w-16 h-16 rounded-full bg-electric/10 flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-8 h-8 text-electric" />
                 </div>
-                <h3 className="text-xl font-bold text-navy dark:text-white mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+                <h3 className="text-xl font-bold text-navy mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
                   {value.title}
                 </h3>
-                <p className="text-steel dark:text-gray-400">{value.desc}</p>
+                <p className="text-steel">{value.desc}</p>
               </div>
             ))}
           </div>
@@ -128,7 +128,7 @@ export default function HomePage({ locale }: { locale: string }) {
       {/* CTA Section */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-navy to-navy-light dark:from-[#0f172a] dark:to-[#1e293b] rounded-3xl p-12 lg:p-16 text-center">
+          <div className="bg-gradient-to-br from-navy to-navy-light rounded-3xl p-12 lg:p-16 text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
               {t(messages, 'home.ctaTitle')}
             </h2>

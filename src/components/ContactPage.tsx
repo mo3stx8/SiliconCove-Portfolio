@@ -36,7 +36,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-br from-surface via-white to-electric/5 dark:from-[#0f172a] dark:via-[#0f172a] dark:to-electric/5">
+      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-br from-surface via-white to-electric/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="section-label">{t(messages, 'contact.label')}</span>
           <h1 className="section-title mt-4">{t(messages, 'contact.title')}</h1>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-4">
                   <Mail className="w-6 h-6 text-electric" />
                 </div>
-                <h3 className="font-bold text-navy dark:text-white mb-2">{t(messages, 'contact.info.email')}</h3>
+                <h3 className="font-bold text-navy mb-2">{t(messages, 'contact.info.email')}</h3>
                 <a href="mailto:info@siliconcove.com" className="text-electric hover:underline">
                   info@siliconcove.com
                 </a>
@@ -61,44 +61,44 @@ export default function ContactPage() {
                 <div className="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center mb-4">
                   <MapPin className="w-6 h-6 text-electric" />
                 </div>
-                <h3 className="font-bold text-navy dark:text-white mb-2">{t(messages, 'contact.info.location')}</h3>
-                <p className="text-steel dark:text-gray-400">{t(messages, 'contact.info.locationValue')}</p>
+                <h3 className="font-bold text-navy mb-2">{t(messages, 'contact.info.location')}</h3>
+                <p className="text-steel">{t(messages, 'contact.info.locationValue')}</p>
               </div>
             </div>
 
             <div className="lg:col-span-2">
               {submitted ? (
                 <div className="card text-center py-16">
-                  <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-6">
-                    <Send className="w-8 h-8 text-green-600 dark:text-green-400" />
+                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+                    <Send className="w-8 h-8 text-green-600" />
                   </div>
-                  <p className="text-xl text-navy dark:text-white font-semibold">{t(messages, 'contact.success')}</p>
+                  <p className="text-xl text-navy font-semibold">{t(messages, 'contact.success')}</p>
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={handleSubmit} className="card space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-navy dark:text-gray-300 mb-2">{t(messages, 'contact.form.name')}</label>
-                      <input name="from_name" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-navy dark:text-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all" />
+                      <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.name')}</label>
+                      <input name="from_name" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-navy dark:text-gray-300 mb-2">{t(messages, 'contact.form.email')}</label>
-                      <input name="from_email" type="email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-navy dark:text-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all" />
+                      <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.email')}</label>
+                      <input name="from_email" type="email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-navy dark:text-gray-300 mb-2">{t(messages, 'contact.form.company')}</label>
-                      <input name="company" type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-navy dark:text-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all" />
+                      <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.company')}</label>
+                      <input name="company" type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-navy dark:text-gray-300 mb-2">{t(messages, 'contact.form.subject')}</label>
-                      <input name="subject" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-navy dark:text-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all" />
+                      <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.subject')}</label>
+                      <input name="subject" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-navy dark:text-gray-300 mb-2">{t(messages, 'contact.form.message')}</label>
-                    <textarea name="message" rows={5} required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-navy dark:text-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all resize-none" />
+                    <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.message')}</label>
+                    <textarea name="message" rows={5} required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy resize-none" />
                   </div>
                   {error && <p className="text-red-500 text-sm">{error}</p>}
                   <button type="submit" disabled={sending} className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed">

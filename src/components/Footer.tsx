@@ -11,7 +11,7 @@ export default function Footer() {
   const prefix = `/${locale}`;
 
   return (
-    <footer className="bg-navy dark:bg-[#020617] text-white">
+    <footer className="bg-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-navy-light dark:border-gray-800 mt-12 pt-8 text-center text-steel-light text-sm">
+        <div className="border-t border-navy-light mt-12 pt-8 text-center text-steel-light text-sm">
           <p>&copy; {new Date().getFullYear()} SiliconCove. {t(messages, 'footer.rights')}</p>
         </div>
       </div>

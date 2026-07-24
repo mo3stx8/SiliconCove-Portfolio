@@ -13,7 +13,7 @@ export default function TeamPage() {
 
   return (
     <>
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-br from-surface via-white to-electric/5 dark:from-[#0f172a] dark:via-[#0f172a] dark:to-electric/5">
+      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-to-br from-surface via-white to-electric/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="section-label">{t(messages, 'team.label')}</span>
           <h1 className="section-title mt-4">{t(messages, 'team.title')}</h1>
@@ -29,11 +29,11 @@ export default function TeamPage() {
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-electric to-navy-light flex items-center justify-center mx-auto mb-6">
                   <Icon className="w-12 h-12 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-navy dark:text-white mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                <h3 className="text-2xl font-bold text-navy mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
                   {t(messages, `team.members.${key}.name`)}
                 </h3>
                 <p className="text-electric font-semibold mb-4">{t(messages, `team.members.${key}.role`)}</p>
-                <p className="text-steel dark:text-gray-400 leading-relaxed">{t(messages, `team.members.${key}.desc`)}</p>
+                <p className="text-steel leading-relaxed">{t(messages, `team.members.${key}.desc`)}</p>
               </div>
             ))}
           </div>
