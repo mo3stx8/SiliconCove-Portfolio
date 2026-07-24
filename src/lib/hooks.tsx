@@ -9,3 +9,9 @@ export function usePathname() {
     () => '',
   );
 }
+
+const BASE_PATH = '/SiliconCove-Portfolio';
+
+export function useBasePath() {
+  return BASE_PATH;
+}

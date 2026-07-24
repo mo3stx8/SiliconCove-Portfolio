@@ -1,12 +1,13 @@
 'use client';
 
 import { useMessages, t } from '@/lib/i18n';
-import { px } from 'framer-motion';
+import { useBasePath } from '@/lib/hooks';
 import { ArrowRight, Shield, Zap, Code2, Globe, BarChart3, Users, CheckCircle } from 'lucide-react';
 
 export default function HomePage({ locale }: { locale: string }) {
   const messages = useMessages();
-  const prefix = `/${locale}`;
+  const basePath = useBasePath();
+  const prefix = `${basePath}/${locale}`;
 
   return (
     <>

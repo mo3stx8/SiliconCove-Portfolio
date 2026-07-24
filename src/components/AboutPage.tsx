@@ -1,11 +1,13 @@
 'use client';
 
 import { useMessages, t } from '@/lib/i18n';
+import { useBasePath } from '@/lib/hooks';
 import { Target, Eye, Shield, CheckCircle, Lock, Users, Zap, ArrowRight } from 'lucide-react';
 
 export default function AboutPage({ locale }: { locale: string }) {
   const messages = useMessages();
-  const prefix = `/${locale}`;
+  const basePath = useBasePath();
+  const prefix = `${basePath}/${locale}`;
 
   const values = [
     { icon: Shield, key: 'reliability' },

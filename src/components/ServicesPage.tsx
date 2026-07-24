@@ -1,6 +1,7 @@
 'use client';
 
 import { useMessages, t } from '@/lib/i18n';
+import { useBasePath } from '@/lib/hooks';
 import { Code2, Globe, Zap, BarChart3, Shield, Users, ArrowRight } from 'lucide-react';
 
 const serviceKeys = ['customDev', 'webDev', 'mobileDev', 'saas', 'cloudDevOps', 'consulting'] as const;
@@ -8,7 +9,8 @@ const icons = [Code2, Globe, Zap, BarChart3, Shield, Users];
 
 export default function ServicesPage({ locale }: { locale: string }) {
   const messages = useMessages();
-  const prefix = `/${locale}`;
+  const basePath = useBasePath();
+  const prefix = `${basePath}/${locale}`;
 
   return (
     <>

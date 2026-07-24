@@ -1,6 +1,7 @@
 'use client';
 
 import { useLocale, useMessages, t } from '@/lib/i18n';
+import { useBasePath } from '@/lib/hooks';
 import { Laptop, TrendingUp, Globe, Lightbulb, ArrowRight } from 'lucide-react';
 
 const perkKeys = ['remote', 'growth', 'impact', 'culture'] as const;
@@ -9,7 +10,8 @@ const perkIcons = [Laptop, TrendingUp, Globe, Lightbulb];
 export default function CareersPage() {
   const locale = useLocale();
   const messages = useMessages();
-  const prefix = `/${locale}`;
+  const basePath = useBasePath();
+  const prefix = `${basePath}/${locale}`;
 
   return (
     <>

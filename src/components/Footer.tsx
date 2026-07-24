@@ -1,6 +1,7 @@
 'use client';
 
 import { useLocale, useMessages, t } from '@/lib/i18n';
+import { useBasePath } from '@/lib/hooks';
 import { Mail, MapPin } from 'lucide-react';
 
 const footerLinks = ['about', 'services', 'products', 'team', 'careers', 'contact'] as const;
@@ -8,7 +9,8 @@ const footerLinks = ['about', 'services', 'products', 'team', 'careers', 'contac
 export default function Footer() {
   const locale = useLocale();
   const messages = useMessages();
-  const prefix = `/${locale}`;
+  const basePath = useBasePath();
+  const prefix = `${basePath}/${locale}`;
 
   return (
     <footer className="bg-navy text-white">
@@ -16,7 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-2">
             <a href={prefix} className="inline-block mb-4">
-              <img src="/logo-trans.png" alt="SiliconCove" className="h-16 w-auto" />
+              <img src={`${basePath}/logo-trans.png`} alt="SiliconCove" className="h-16 w-auto" />
             </a>
             <p className="text-steel-light text-lg mt-4 max-w-md">{t(messages, 'footer.tagline')}</p>
             <div className="flex items-center gap-6 mt-6">
