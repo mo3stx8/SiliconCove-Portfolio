@@ -16,25 +16,25 @@ export default function HomePage({ locale }: { locale: string }) {
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-navy/5 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <span className="animate-fade-up opacity-0 inline-flex items-center gap-2 px-4 py-2 bg-electric/10 text-electric rounded-full text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
               {t(messages, 'hero.badge')}
             </span>
 
-            <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight flex items-center gap-4 flex-nowrap" style={{ fontFamily: 'var(--font-heading)' }}>
-              <span>
+            <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-navy leading-tight flex items-center gap-6 flex-nowrap" style={{ fontFamily: 'var(--font-heading)' }}>
+              <span className="whitespace-nowrap">
                 {t(messages, 'hero.title')}{' '}
                 <span className="gradient-text">{t(messages, 'hero.titleHighlight')}</span>
               </span>
-              <img src="/logo.png" alt="SiliconCove" className="h-14 md:h-16 lg:h-20 w-auto shrink-0" />
+              <img src="/logo.png" alt="SiliconCove" className="h-20 md:h-28 lg:h-36 xl:h-44 w-auto shrink-0" />
             </h1>
 
-            <p className="animate-fade-up opacity-0 animate-delay-200 text-lg md:text-xl text-steel mt-6 max-w-xl leading-relaxed">
+            <p className="animate-fade-up opacity-0 animate-delay-200 text-lg md:text-xl text-steel mt-8 max-w-xl leading-relaxed">
               {t(messages, 'hero.description')}
             </p>
 
-            <div className="animate-fade-up opacity-0 animate-delay-300 flex flex-wrap gap-4 mt-8">
+            <div className="animate-fade-up opacity-0 animate-delay-300 flex flex-wrap gap-4 mt-10">
               <a href={`${prefix}/contact/`} className="btn-primary">
                 {t(messages, 'hero.cta')}
                 <ArrowRight className={`w-5 h-5 ${locale === 'ar' ? 'rotate-180 mr-2' : 'ml-2'}`} />
