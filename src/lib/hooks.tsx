@@ -10,8 +10,14 @@ export function usePathname() {
   );
 }
 
-const BASE_PATH = '/SiliconCove-Portfolio';
-
 export function useBasePath() {
-  return BASE_PATH;
+  return useSyncExternalStore(
+    () => () => {},
+    () => {
+      const path = window.location.pathname;
+      if (path.startsWith('/SiliconCove-Portfolio/')) return '/SiliconCove-Portfolio';
+      return '';
+    },
+    () => '/SiliconCove-Portfolio',
+  );
 }

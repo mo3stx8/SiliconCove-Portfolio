@@ -2,8 +2,11 @@ export default function RootPage() {
   return (
     <html>
       <head>
-        <meta httpEquiv="refresh" content="0;url=/SiliconCove-Portfolio/en/" />
-        <link rel="canonical" href="/SiliconCove-Portfolio/en/" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.location.href = window.location.pathname.includes('/SiliconCove-Portfolio') ? '/SiliconCove-Portfolio/en/' : '/en/';`,
+          }}
+        />
       </head>
       <body />
     </html>
