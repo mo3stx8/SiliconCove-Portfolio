@@ -23,11 +23,11 @@ export default function HomePage({ locale }: { locale: string }) {
             </span>
 
             <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight flex items-center gap-4 flex-nowrap" style={{ fontFamily: 'var(--font-heading)' }}>
-              <img src="/logo.png" alt="SiliconCove" className="h-14 md:h-16 lg:h-20 w-auto shrink-0" />
               <span>
                 {t(messages, 'hero.title')}{' '}
                 <span className="gradient-text">{t(messages, 'hero.titleHighlight')}</span>
               </span>
+              <img src="/logo.png" alt="SiliconCove" className="h-14 md:h-16 lg:h-20 w-auto shrink-0" />
             </h1>
 
             <p className="animate-fade-up opacity-0 animate-delay-200 text-lg md:text-xl text-steel mt-6 max-w-xl leading-relaxed">
