@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "title": "SiliconCove - Technology You Can Rely On",
+    "description": "SiliconCove is a globally minded technology partner founded in Yemen, delivering reliable digital solutions, professional services, and innovative SaaS products."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "team": "Team",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Founded in Yemen, Serving Globally",
+    "title": "Reliable Technology",
+    "titleHighlight": "Under One Roof",
+    "description": "We build, manage, and continuously improve reliable digital solutions that help businesses grow, operate efficiently, and embrace digital transformation with confidence.",
+    "cta": "Get Started",
+    "ctaSecondary": "Our Services"
+  },
+  "home": {
+    "servicesLabel": "What We Do",
+    "servicesTitle": "End-to-End Digital Solutions",
+    "servicesDesc": "From custom software development to SaaS products and technology consulting — we deliver comprehensive solutions businesses can depend on.",
+    "stats": {
+      "years": "Years of Innovation",
+      "clients": "Satisfied Clients",
+      "projects": "Projects Delivered",
+      "uptime": "System Uptime"
+    },
+    "ctaTitle": "Ready to Transform Your Business?",
+    "ctaDesc": "Partner with SiliconCove and experience technology you can truly rely on.",
+    "ctaButton": "Start a Conversation"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Who We Are",
+    "description": "SiliconCove is a globally minded technology partner founded in Yemen, delivering reliable digital solutions, professional services, and innovative SaaS products that businesses can depend on.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "We build, manage, and continuously improve reliable digital solutions that help businesses grow, operate efficiently, and embrace digital transformation with confidence."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To become a globally trusted technology ecosystem founded in Yemen, delivering reliable digital solutions, innovative products, and transformative technologies that empower businesses worldwide."
+    },
+    "values": {
+      "title": "Core Values",
+      "reliability": { "title": "Reliability", "desc": "Reliability over anything. We deliver solutions you can count on." },
+      "quality": { "title": "Quality", "desc": "Quality is not an option — it is our standard." },
+      "security": { "title": "Security", "desc": "Security is part of the product, not an addition." },
+      "professionalism": { "title": "Professionalism", "desc": "Professionalism in handling and execution at every level." },
+      "innovation": { "title": "Innovation", "desc": "We adopt technologies that add real value." }
+    },
+    "promise": {
+      "title": "Brand Promise",
+      "text": "Technology You Can Rely On."
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title": "Our Services",
+    "description": "Comprehensive technology solutions tailored to help your business build, grow, and thrive in the digital age.",
+    "items": {
+      "customDev": {
+        "title": "Custom Software Development",
+        "desc": "End-to-end software solutions built to your exact specifications using modern tech stacks and best practices."
+      },
+      "webDev": {
+        "title": "Web Application Development",
+        "desc": "Responsive, performant web applications designed for scale and user experience."
+      },
+      "mobileDev": {
+        "title": "Mobile App Development",
+        "desc": "Native and cross-platform mobile applications that deliver seamless experiences."
+      },
+      "saas": {
+        "title": "SaaS Product Development",
+        "desc": "Build and launch your SaaS products with our proven development methodology."
+      },
+      "cloudDevOps": {
+        "title": "Cloud & DevOps",
+        "desc": "Cloud infrastructure setup, CI/CD pipelines, and DevOps consulting for reliable deployments."
+      },
+      "consulting": {
+        "title": "Technology Consulting",
+        "desc": "Strategic technology guidance to help you make informed decisions and optimize your digital investments."
+      }
+    },
+    "ctaTitle": "Need a Custom Solution?",
+    "ctaDesc": "We tailor our services to meet your unique business requirements.",
+    "ctaButton": "Discuss Your Project"
+  },
+  "products": {
+    "label": "Products",
+    "title": "Our Products",
+    "description": "Innovative SaaS solutions designed to transform industries and drive operational excellence.",
+    "manarah": {
+      "title": "Manarah Port Management Platform",
+      "subtitle": "A comprehensive platform for operating and managing seaports and logistics services.",
+      "desc": "Manarah is our flagship SaaS product — a powerful platform designed to streamline port operations, manage vessel activities, track cargo, and optimize logistics workflows. Built with reliability at its core.",
+      "features": {
+        "vesselManagement": { "title": "Vessel Management", "desc": "Track and manage active vessels, register operational tasks, and assign docking positions." },
+        "cargoTracking": { "title": "Cargo Tracking", "desc": "Monitor cargo in real-time from arrival to departure with automated container logging." },
+        "permits": { "title": "Permits & Documentation", "desc": "Issue port permits, manage documentation, and maintain historical vessel records." },
+        "rbac": { "title": "Role-Based Access", "desc": "Multi-role system with RBAC for Port Officers, Shipping Agents, Wharf Managers, Traders, and Executive Management." },
+        "notifications": { "title": "Notifications & Activity Logs", "desc": "Real-time notifications and comprehensive activity logs for full operational visibility." },
+        "reporting": { "title": "Reports & Analytics", "desc": "Daily operational summaries with exportable reports in Excel and PDF formats." }
+      }
+    }
+  },
+  "team": {
+    "label": "Team",
+    "title": "Meet Our Team",
+    "description": "The talented engineers behind SiliconCove's reliable technology solutions.",
+    "members": {
+      "mostafa": {
+        "name": "Mostafa Ameen",
+        "role": "Full-Stack Engineer & Founder",
+        "desc": "Driving the full product lifecycle from architecture to deployment. Passionate about building reliable, scalable systems."
+      },
+      "mohammed": {
+        "name": "Mohammed Ameen",
+        "role": "Backend Engineer",
+        "desc": "Specializing in robust backend architectures and API design. Committed to building secure, high-performance systems."
+      }
+    }
+  },
+  "careers": {
+    "label": "Careers",
+    "title": "Join Our Team",
+    "description": "Be part of a growing technology company that's building the future from Yemen to the world.",
+    "perks": {
+      "title": "Why Work With Us",
+      "remote": { "title": "Remote-Friendly", "desc": "Work from anywhere with flexible hours." },
+      "growth": { "title": "Growth Opportunities", "desc": "Continuous learning and career development." },
+      "impact": { "title": "Real Impact", "desc": "Your work directly affects products used by businesses worldwide." },
+      "culture": { "title": "Innovation Culture", "desc": "A environment that values ideas and rewards initiative." }
+    },
+    "positions": {
+      "title": "Open Positions",
+      "comingSoon": "We're not hiring right now, but we're always looking for talented people. Send us your resume for future opportunities!"
+    },
+    "ctaTitle": "Don't See Your Role?",
+    "ctaDesc": "We're always interested in meeting talented people who share our passion for technology.",
+    "ctaButton": "Send Your Resume"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Get in Touch",
+    "description": "Have a project in mind? Let's discuss how SiliconCove can help your business grow.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "location": "Location",
+      "locationValue": "Yemen"
+    },
+    "success": "Thank you! Your message has been sent. We'll get back to you soon."
+  },
+  "footer": {
+    "tagline": "Reliable Technology Under One Roof",
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect"
+  }
+}
