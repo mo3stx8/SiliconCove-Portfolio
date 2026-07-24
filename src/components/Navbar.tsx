@@ -1,25 +1,18 @@
 'use client';
 
 import { useLocale, useMessages, t } from '@/lib/i18n';
-import { useState, useSyncExternalStore } from 'react';
+import { usePathname } from '@/lib/hooks';
+import { useState } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 
 const navLinks = ['home', 'about', 'services', 'products', 'team', 'careers', 'contact'] as const;
 
-function usePathname() {
-  return useSyncExternalStore(
-    () => () => {},
-    () => window.location.pathname,
-    () => '',
-  );
-}
-
 export default function Navbar() {
   const locale = useLocale();
   const messages = useMessages();
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const pathname = usePathname();
 
   const prefix = `/${locale}`;
 
@@ -31,7 +24,7 @@ export default function Navbar() {
   const isActive = (key: string) => {
     if (!pathname) return false;
     if (pathname === '/') return key === 'home';
-    if (key === 'home') return pathname === '/en/' || pathname === '/ar/';
+    if (key === 'home') return pathname === '/en/' || pathname === '/ar/' || pathname === '/en' || pathname === '/ar';
     return pathname.includes(`/${key}`);
   };
 

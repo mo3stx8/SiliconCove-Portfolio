@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: '/SiliconCove-Portfolio',
+  assetPrefix: '/SiliconCove-Portfolio',
 };
 
 export default nextConfig;
