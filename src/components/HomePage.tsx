@@ -22,9 +22,12 @@ export default function HomePage({ locale }: { locale: string }) {
               {t(messages, 'hero.badge')}
             </span>
 
-            <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-              {t(messages, 'hero.title')}{' '}
-              <span className="gradient-text">{t(messages, 'hero.titleHighlight')}</span>
+            <h1 className="animate-fade-up opacity-0 animate-delay-100 text-4xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight flex items-center gap-4 flex-wrap" style={{ fontFamily: 'var(--font-heading)' }}>
+              <img src="/logo.png" alt="SiliconCove" className="h-16 md:h-20 lg:h-24 w-auto" />
+              <span>
+                {t(messages, 'hero.title')}{' '}
+                <span className="gradient-text">{t(messages, 'hero.titleHighlight')}</span>
+              </span>
             </h1>
 
             <p className="animate-fade-up opacity-0 animate-delay-200 text-lg md:text-xl text-steel mt-6 max-w-xl leading-relaxed">

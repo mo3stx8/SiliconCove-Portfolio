@@ -1,9 +1,8 @@
 'use client';
 
 import { useMessages, t } from '@/lib/i18n';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, Paperclip, X } from 'lucide-react';
 import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const messages = useMessages();
@@ -11,6 +10,7 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
+  const [file, setFile] = useState<File | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,13 +20,33 @@ export default function ContactPage() {
     setError('');
 
     try {
-      await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        formRef.current,
-        { publicKey: 'YOUR_PUBLIC_KEY' }
-      );
-      setSubmitted(true);
+      const formData = new FormData(formRef.current);
+      if (file) {
+        formData.append('attachment', file);
+      }
+
+      const response = await fetch('https://formly.email/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const text = await response.text();
+      let result;
+      try {
+        result = JSON.parse(text);
+      } catch {
+        if (response.ok) {
+          setSubmitted(true);
+          return;
+        }
+        throw new Error('Invalid response');
+      }
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError(result.message || 'Failed to send message. Please try again.');
+      }
     } catch {
       setError('Failed to send message. Please try again or email us directly.');
     } finally {
@@ -53,8 +73,8 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-electric" />
                 </div>
                 <h3 className="font-bold text-navy mb-2">{t(messages, 'contact.info.email')}</h3>
-                <a href="mailto:info@siliconcove.com" className="text-electric hover:underline">
-                  info@siliconcove.com
+                <a href="mailto:mostafasa7754@gmail.com" className="text-electric hover:underline">
+                  mostafasa7754@gmail.com
                 </a>
               </div>
               <div className="card">
@@ -76,14 +96,17 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={handleSubmit} className="card space-y-6">
+                  <input type="hidden" name="access_key" value="830602bae8da4873bda763ac7521914e" />
+                  <input type="hidden" name="subject" value="New Contact Form Submission" />
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.name')}</label>
-                      <input name="from_name" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
+                      <input name="name" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.email')}</label>
-                      <input name="from_email" type="email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
+                      <input name="email" type="email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,13 +116,41 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.subject')}</label>
-                      <input name="subject" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
+                      <input name="subject_field" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy" />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.message')}</label>
                     <textarea name="message" rows={5} required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-navy resize-none" />
                   </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-navy mb-2">{t(messages, 'contact.form.attachment')}</label>
+                    <div className="flex items-center gap-3">
+                      <label className="flex-1 flex items-center gap-2 px-4 py-3 rounded-lg border border-dashed border-gray-300 hover:border-electric cursor-pointer transition-colors">
+                        <Paperclip className="w-5 h-5 text-steel" />
+                        <span className="text-sm text-steel">
+                          {file ? file.name : t(messages, 'contact.form.attachmentHint')}
+                        </span>
+                        <input
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          className="hidden"
+                          onChange={(e) => setFile(e.target.files?.[0] || null)}
+                        />
+                      </label>
+                      {file && (
+                        <button
+                          type="button"
+                          onClick={() => setFile(null)}
+                          className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                        >
+                          <X className="w-5 h-5" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+
                   {error && <p className="text-red-500 text-sm">{error}</p>}
                   <button type="submit" disabled={sending} className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed">
                     <Send className="w-5 h-5 mr-2" />

@@ -157,6 +157,8 @@
       "company": "Company Name",
       "subject": "Subject",
       "message": "Your Message",
+      "attachment": "Attach CV / Resume (optional)",
+      "attachmentHint": "Click to attach PDF, DOC, or DOCX",
       "submit": "Send Message",
       "sending": "Sending..."
     },

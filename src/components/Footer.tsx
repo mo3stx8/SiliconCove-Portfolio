@@ -20,9 +20,9 @@ export default function Footer() {
             </a>
             <p className="text-steel-light text-lg mt-4 max-w-md">{t(messages, 'footer.tagline')}</p>
             <div className="flex items-center gap-6 mt-6">
-              <a href="mailto:info@siliconcove.com" className="flex items-center gap-2 text-steel-light hover:text-electric transition-colors">
+              <a href="mailto:mostafasa7754@gmail.com" className="flex items-center gap-2 text-steel-light hover:text-electric transition-colors">
                 <Mail className="w-5 h-5" />
-                <span>info@siliconcove.com</span>
+                <span>mostafasa7754@gmail.com</span>
               </a>
               <a href="#" className="flex items-center gap-2 text-steel-light hover:text-electric transition-colors">
                 <MapPin className="w-5 h-5" />
@@ -51,17 +51,17 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">{t(messages, 'footer.connect')}</h3>
             <ul className="space-y-3 text-sm text-steel-light">
               <li>
-                <a href="https://twitter.com/siliconcove" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">
+                <a href="https://twitter.com/mo3stx7" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">
                   Twitter / X
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/company/siliconcove" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">
+                <a href="https://linkedin.com/in/mostafa-al-zubairi" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/siliconcove" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">
+                <a href="https://github.com/mo3stx8" target="_blank" rel="noopener noreferrer" className="hover:text-electric transition-colors">
                   GitHub
                 </a>
               </li>
