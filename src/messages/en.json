@@ -125,11 +125,6 @@
         "name": "Mohammed Ameen",
         "role": "Backend Engineer",
         "desc": "Specializing in robust backend architectures and API design. Committed to building secure, high-performance systems."
-      },
-      "abdullah": {
-        "name": "Eng. Abdullah Lagda",
-        "role": "Security Expert",
-        "desc": "Focusing on safeguarding systems with proactive security measures, threat analysis, and robust defense strategies."
       }
     }
   },
