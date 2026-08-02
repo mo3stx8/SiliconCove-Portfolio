@@ -1,11 +1,12 @@
 'use client';
 
 import { useMessages, t } from '@/lib/i18n';
-import { Code2, Server } from 'lucide-react';
+import { Code2, Server, Shield } from 'lucide-react';
 
 const members = [
   { key: 'mostafa', icon: Code2 },
   { key: 'mohammed', icon: Server },
+  { key: 'abdullah', icon: Shield },
 ];
 
 export default function TeamPage() {
